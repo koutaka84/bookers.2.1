@@ -1,0 +1,67 @@
+<div class="container">
+
+<% if @book.errors.any? %> 
+  <%= @book.errors.count %>件のerrorが発生しました 
+  <% @book.errors.full_messages.each do |message| %> 
+  <%= message %> 
+   <% end %> 
+   <% end %> 
+
+  <h1>Editing Book</h1>
+
+  <%= form_for(@book) do |f| %>
+ 
+  <h4>Title</h4>
+  <%= f.text_field :title %>
+ 
+  <h4>Opinion</h4>
+  <%= f.text_area :body %>
+ s
+  <%= f.submit 'Update Book' %>
+
+  <%= link_to 'Show',book_path %>
+  <%= link_to 'Back',books_path %>
+<% end %>
+
+
+
+
+  <!-- <div class='col-md-3 col-md-offset-3'>
+  </div>
+  	
+		<form class="edit_book" id="edit_book_34311" action="/books/34311" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="patch"><input type="hidden" name="authenticity_token" value="2EXCPKQmrbhVqW/TFeUdI/FKMv/+1q+CF4m3Cm4LF0AtPT2LJDh90QrwnCdT5FZnT1Dge6QeynyVDXq/iWjTZQ==">
+  <div class="field row">
+    <label for="book_title">Title</label>
+    <input class="col-xs-12 book_title" type="text" value="svig" name="book[title]" id="book_title">
+  </div>
+
+  <div class="field row">
+    <label for="book_opinion">Opinion</label>
+    <textarea class="col-xs-12 book_body" name="book[body]" id="book_body">scl</textarea>
+  </div>
+
+  <div class="actions row">
+    <input type="submit" name="commit" value="Update Book" class="btn btn-primary col-xs-12" data-disable-with="Update Book">
+  </div>
+</form>
+		<a class="book_34311" href="/books/34311">Show</a> |
+		<a class="back" href="/books">Back</a>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+      </div>
+    </div>
+
+    <footer>
+  <div class="container">
+  	<div class="row">
+    	<div class="col-xs-3 col-xs-offset-9">
+    		<p>CopyRight Infratop.inc</p>
+    	</div>
+    </div>
+  </div>
+</footer>
+ -->
+
+
+</body></html>
